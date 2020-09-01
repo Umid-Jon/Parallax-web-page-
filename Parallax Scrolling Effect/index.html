@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <img src="./img/bg.jpg" id="bg">
+        <img src="./img/moon.png" id="moon">
+        <img src="./img/mountain.png" id="mountain">
+        <img src="./img/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+    <div>
+        <h2>Parallax Scrolling Page</h2>
+        
+        <p>Life is a journey that is meant to be embraced to the fullest every day. However, that doesn’t mean you always wake up ready to seize the day, and sometimes need a reminder that life is a great gift. Whether a funny quote from your favorite celebrity, or an encouraging message about giving it your best from a successful business person, we can all use a little motivation and inspiration once these days via a life quote.
+        Allow these 150 inspirational quotes about life to give you an extra pep in your step whenever you may need it. Keep it bookmarked on your phone or computer to pull up and scroll through whenever you need a little pick me up.</p>
+        
+        <p id="name"> Ibn Abdulmannon  &copy;</p>
+    </div>
+
+    
+    <script type="text/javascript">
+       let bg = document.getElementById("bg");
+       let moon = document.getElementById("moon");
+       let mountain = document.getElementById("mountain");
+       let road = document.getElementById("road");
+       let text = document.getElementById("text");
+
+       window.addEventListener('scroll', function () {
+          var  value = window.scrollY;
+
+          bg.style.top = value * 0.5 + 'px';
+          moon.style.left = -value   * 0.5 + 'px';
+          mountain.style.top = -value * 0.15 + 'px';
+          road.style.top = value * 0.15 + 'px';
+          text.style.top = value * 1 + 'px';
+
+       })
+    </script>
+</body>
+</html> 
